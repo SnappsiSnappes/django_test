@@ -1,6 +1,6 @@
 ## Установка и запуск
 - Клонируйте репозиторий на свой компьютер.
-- Создайте виртуальное окружение с помощью команды ```python -m venv venv``` и активируйте его ```.\venv\Scripts\activate``` windows или ```source venv/bin/activate```
+- Создайте виртуальное окружение с помощью команды в **CMD/powershell** ```python -m venv venv``` и активируйте его ```.\venv\Scripts\activate``` windows или ```source venv/bin/activate```
 
 - Установите все зависимости с помощью команды ```pip install -r requirements.txt```
 - Запустите миграции базы данных с помощью команды ```python manage.py migrate```
