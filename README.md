@@ -8,7 +8,7 @@
 ### 3) Рабочая страница добавления товара/статьи , в том числе в админ панеле. Установлен модуль RichCharField
 ![screencapture-127-0-0-1-8000-addpage-2023-05-02-19_26_32 (1)](https://user-images.githubusercontent.com/111605401/235727045-b3f8e0b9-727b-4ab2-8c27-cf7d177051f2.png)
 ![image](https://user-images.githubusercontent.com/111605401/235727585-26c80813-58d3-451e-a911-10de0b26d8ac.png)
-- за это отвечает javascript:
+- за это отвечает javascript в шаблоне post.html:
 ```
 <script>
     /**
@@ -32,8 +32,9 @@
 ![image](https://user-images.githubusercontent.com/111605401/235728538-c164c381-0f7b-46b1-b469-4b9edee8ec86.png)
 ![image](https://user-images.githubusercontent.com/111605401/235728908-cdac6966-c7fb-4d00-91eb-9f4e8ce03100.png)
 за это отвечает функция Save в models.py - она отредактирована и использует специальный модуль slugify, так же использует ОРМ Джанго , чтобы проверить , существует ли запись с таким именем в базе данных, если да то добавляет цифру на конце +1
+
 ```
-    def save(self, *args, **kwargs):
+def save(self, *args, **kwargs):
         #* Если запись еще не сохранена в базе данных,
         #* создаем slug, добавляя случайное число
         base_slug = slugify2(self.title)
@@ -43,5 +44,5 @@
             slug = base_slug + '_' + str(n)
             n += 1
         self.slug = slug
-        super(Women, self).save(*args, **kwargs)```
-        
+        super(Women, self).save(*args, **kwargs)
+```
