@@ -13,7 +13,7 @@
 ![изображение_2023-05-02_192454818](https://user-images.githubusercontent.com/111605401/235726563-b6260243-d198-4b34-a169-3b198c1e19bb.png)
 
 
-### 3) Рабочая страница добавления товара/статьи , в том числе в админ панеле. Установлен модуль RichCharField
+### 3) Рабочая страница добавления товара/статьи , в том числе в админ панели. Установлен модуль RichCharField
 ![screencapture-127-0-0-1-8000-addpage-2023-05-02-19_26_32 (1)](https://user-images.githubusercontent.com/111605401/235727045-b3f8e0b9-727b-4ab2-8c27-cf7d177051f2.png)
 ![image](https://user-images.githubusercontent.com/111605401/235727585-26c80813-58d3-451e-a911-10de0b26d8ac.png)
 - за это отвечает javascript в шаблоне post.html:
