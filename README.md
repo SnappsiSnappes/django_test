@@ -28,6 +28,9 @@
     })();
 </script>
 ```
+### блок комментариев подключен Disqus
+![screencapture-127-0-0-1-8000-post-f-2023-05-02-19_49_36 (1)](https://user-images.githubusercontent.com/111605401/235732160-bd7a7d8f-10f1-4fef-afd6-fa32648e9884.png)
+
 ### 4) работает слаг постов с кирилицей
 ![image](https://user-images.githubusercontent.com/111605401/235728538-c164c381-0f7b-46b1-b469-4b9edee8ec86.png)
 ![image](https://user-images.githubusercontent.com/111605401/235728908-cdac6966-c7fb-4d00-91eb-9f4e8ce03100.png)
@@ -46,3 +49,25 @@ def save(self, *args, **kwargs):
         self.slug = slug
         super(Women, self).save(*args, **kwargs)
 ```
+### 5) интегрирована Регистрация
+![изображение_2023-05-02_194344661](https://user-images.githubusercontent.com/111605401/235730910-2c71d915-694a-43e7-92e3-5d0319b7831b.png)
+- так же авторизация через другие сервисы
+![изображение_2023-05-02_194444855](https://user-images.githubusercontent.com/111605401/235731109-5b030e9a-c16b-4610-b51f-1328f32afb87.png)
+
+### 6) в шаблоне используется template_tag с проверкой на user.is_stuff
+![image](https://user-images.githubusercontent.com/111605401/235731509-0b174304-04e5-48b0-a25c-5e9130a69a2d.png)
+![image](https://user-images.githubusercontent.com/111605401/235732486-e671dc48-fa7c-4c1d-bed5-9d46fc1d52c4.png)
+
+### 7) Интегрирован crispy-forms
+![image](https://user-images.githubusercontent.com/111605401/235732800-af931661-19b1-462b-8a9c-faf3f23e1162.png)
+
+### 8) админка
+![image](https://user-images.githubusercontent.com/111605401/235732991-cd1bf071-6648-4380-9c18-3f2aa5da1b0b.png)
+
+- Поддерживает фильтрацию, настроен интерфейс
+![image](https://user-images.githubusercontent.com/111605401/235733236-aba21ef3-a558-49ea-9676-0915ad9ee2d0.png)
+
+- Позволяет добавлять категории ForeignKey от отдельной базы Cats
+![image](https://user-images.githubusercontent.com/111605401/235733360-5f39ea5d-dcc8-4a28-9ba0-bc2c0a6a9754.png)
+![image](https://user-images.githubusercontent.com/111605401/235733628-efbb4b41-b8aa-4f10-902d-d40f4f63ce44.png)
+
