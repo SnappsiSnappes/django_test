@@ -1,0 +1,54 @@
+{% extends 'women/base.html' %}
+
+
+{% block content %}
+    {{ form.media }}
+
+
+<h1>{{ title }}</h1>
+<form class="mb-3" action="{% url 'add_page' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+<div class="container-fluid">
+
+{% for f in form %}
+{% if f != form.photo %}
+
+<div class="input-group mb-3"><label class="input-group-text" for="{{ f.id_for_label }}">{{ f.label }}:</label>{{ f }}</div>
+<div class="form-label">{{ f.errors }}</div>
+
+{% else %}
+<div class="input-group mb-3"><label class="input-group-text" for="{{ f.id_for_label }}">{{ f.label }}:</label>{{ f }}</div>
+<div class="form-label">{{ f.errors }}</div>
+
+{% endif %}
+
+
+{% endfor %}
+
+    <button type="submit" class="btn btn-primary input-group mb-3">Добавить</button>
+</div>
+</form>
+
+<script>
+    function toggleFields() {
+        var category = document.getElementById("id_category");
+        var price = document.getElementById("id_price");
+        var old_price = document.getElementById("id_old_price");
+    
+        if (category.value === "2") {  // ID выбранной категории (в данном случае "Статья")
+            price.parentElement.style.display = "none";
+            old_price.parentElement.style.display = "none";
+        } else {
+            price.parentElement.style.display = "block";
+            old_price.parentElement.style.display = "block";
+        }
+    }
+    
+    // Вызываем функцию при загрузке страницы и каждый раз при изменении выбранной категории
+    window.onload = toggleFields;
+    document.getElementById("id_category").addEventListener("change", toggleFields);
+    
+</script>
+
+{% endblock %}

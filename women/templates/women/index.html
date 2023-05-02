@@ -1,0 +1,66 @@
+{% extends 'women/base.html' %}
+
+{% block content %}
+
+<!--
+<ul class="list-articles">
+	{% for p in posts %}
+			<li><div class="article-panel">
+                <p class="first">Категория:{{ p.cat }}</p>
+                <p class="last">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</p>
+            </div>
+{% if p.photo %}
+    <p><img class="img-article-left img-thumbnail" src="{{ p.photo.url }}" width="255" height="255"></p>
+{% endif %}
+                <h2>{{p.title}}</h2>
+	{% autoescape on %}
+	{{p.content|linebreaks|truncatewords:50}}
+	{% endautoescape %}
+			<div class="clear"></div>
+			<p class="link-read-post text-center"><a href="{{ p.get_absolute_url }}">Читать пост</a></p>
+			</li>
+	{% endfor %}
+</ul>
+
+
+-->
+<div class="container-fluid ">
+    <div class="row ">
+        {% for p in posts %}
+        <div class="col-lg-4 col-sm-6 p-2 mb-3">
+            <div class="product-card">
+                {% if p.photo %}
+                <div class="product-thumb">
+                    <a href="{{ p.get_absolute_url }}"><img src="{{ p.photo.url }}" alt="..."></a>
+                </div>
+                {% endif %}
+                <div class="product-details p-3 border">
+                    <h4><a class="link-dark " href="{{ p.get_absolute_url }}">
+                        {{p.title|truncatewords:5}}
+                    </a></h4>
+                    <p class=" align-middle text-break">
+                        {% autoescape on %}
+                        {{ p.content|safe|striptags|truncatechars:323 }}
+                        {% endautoescape %}
+                    </p>
+                    <div class="product-bottom-details d-flex justify-content-between">
+                        <div class="product-price">
+                            <small>{% if p.old_price %}{{ p.old_price }}${% endif %}</small>{% if p.price %}{{ p.price }}${% endif %}
+                        </div>
+                        {% if p.price %}
+                        <div class="product-links">
+                            <a href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
+                            <a href="#"><span class="material-symbols-outlined">favorite</span></a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

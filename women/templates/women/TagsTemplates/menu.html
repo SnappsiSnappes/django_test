@@ -1,0 +1,9 @@
+{% for m in menu %}
+  {% if m.title == 'Добавить статью' %}
+    {% if request.user.is_staff and not request.user.is_superuser %}
+      <li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+    {% endif %}
+  {% else %}
+    <li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+  {% endif %}
+{% endfor %}
