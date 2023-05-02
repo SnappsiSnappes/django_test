@@ -71,3 +71,15 @@ def save(self, *args, **kwargs):
 ![image](https://user-images.githubusercontent.com/111605401/235733360-5f39ea5d-dcc8-4a28-9ba0-bc2c0a6a9754.png)
 ![image](https://user-images.githubusercontent.com/111605401/235733628-efbb4b41-b8aa-4f10-902d-d40f4f63ce44.png)
 
+### а так же
+![image](https://user-images.githubusercontent.com/111605401/235734302-b8ea2d86-d629-4ef3-91a0-4423c21549c4.png)
+
+![image](https://user-images.githubusercontent.com/111605401/235734568-01100e4d-3317-4fb7-a7b1-4c4857a63ec0.png)
+
+### настроенная пагинация
+![image](https://user-images.githubusercontent.com/111605401/235735095-1b1abeb9-164f-414f-8f4f-0ab39e70a093.png)
+![image](https://user-images.githubusercontent.com/111605401/235735145-afafe333-fc34-41ff-a36a-b4750893c5ca.png)
+
+### настроено отображение большого текста на карточке 
+![image](https://user-images.githubusercontent.com/111605401/235735528-1dfc946b-fee0-4178-9945-4ecee985cbb9.png)
+
