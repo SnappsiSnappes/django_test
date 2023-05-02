@@ -91,3 +91,5 @@ def save(self, *args, **kwargs):
 ### настроено отображение большого текста на карточке 
 ![image](https://user-images.githubusercontent.com/111605401/235735528-1dfc946b-fee0-4178-9945-4ecee985cbb9.png)
 
+### Настроен Кэш
+![image](https://user-images.githubusercontent.com/111605401/235741482-4a5915ff-3bee-4b5e-a4b1-d0de4b0ddccd.png)
