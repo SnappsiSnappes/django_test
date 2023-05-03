@@ -2,14 +2,12 @@
 - Клонируйте репозиторий на свой компьютер.
 - Создайте виртуальное окружение с помощью команды в **CMD/powershell** 
 ```python -m venv venv``` и активируйте его ```.\venv\Scripts\activate``` windows или ```source venv/bin/activate```
-- Python 3.10.6 x64 - проверено
-- Установите все зависимости с помощью команды 
-```
-python.exe -m pip install --upgrade pip
-pip install -r requirements.txt
 
-python manage.py createsuperuser
-```
+- Установите все зависимости с помощью команды 
+```pip install -r requirements.txt```
+- Запустите миграции базы данных с помощью команды 
+```python manage.py migrate```
+- Запустите сервер разработки с помощью команды 
 ```
 python manage.py makemigrations
 python manage.py migrate
