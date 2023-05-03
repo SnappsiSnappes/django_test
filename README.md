@@ -32,21 +32,24 @@ python manage.py collectstatic
 - за это отвечает javascript в шаблоне post.html:
 ```
 <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = {{ post.slug }}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://6656565.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+    function toggleFields() {
+        var category = document.getElementById("id_category");
+        var price = document.getElementById("id_price");
+        var old_price = document.getElementById("id_old_price");
+    
+        if (category.value === "2") {  // ID выбранной категории (в данном случае "Статья")
+            price.parentElement.style.display = "none";
+            old_price.parentElement.style.display = "none";
+        } else {
+            price.parentElement.style.display = "block";
+            old_price.parentElement.style.display = "block";
+        }
+    }
+    
+    // Вызываем функцию при загрузке страницы и каждый раз при изменении выбранной категории
+    window.onload = toggleFields;
+    document.getElementById("id_category").addEventListener("change", toggleFields);
+    
 </script>
 ```
 ### блок комментариев подключен Disqus
