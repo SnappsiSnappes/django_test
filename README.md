@@ -5,9 +5,7 @@
 
 - Установите все зависимости с помощью команды 
 ```pip install -r requirements.txt```
-- Запустите миграции базы данных с помощью команды 
-```python manage.py migrate```
-- Запустите сервер разработки с помощью команды 
+
 ```
 python manage.py makemigrations
 python manage.py migrate
