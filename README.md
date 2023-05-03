@@ -2,10 +2,13 @@
 - Клонируйте репозиторий на свой компьютер.
 - Создайте виртуальное окружение с помощью команды в **CMD/powershell** 
 ```python -m venv venv``` и активируйте его ```.\venv\Scripts\activate``` windows или ```source venv/bin/activate```
-- ```pip install Cython```
+- Python 3.10.6
 - Установите все зависимости с помощью команды 
-```pip install -r requirements.txt```
-
+```
+pip install -r requirements.txt
+python.exe -m pip install --upgrade pip
+python manage.py createsuperuser
+```
 ```
 python manage.py makemigrations
 python manage.py migrate
