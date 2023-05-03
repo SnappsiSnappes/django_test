@@ -2,7 +2,7 @@
 - Клонируйте репозиторий на свой компьютер.
 - Создайте виртуальное окружение с помощью команды в **CMD/powershell** 
 ```python -m venv venv``` и активируйте его ```.\venv\Scripts\activate``` windows или ```source venv/bin/activate```
-- Python 3.10.6
+- Python 3.10.6 x64 - проверено
 - Установите все зависимости с помощью команды 
 ```
 python.exe -m pip install --upgrade pip
