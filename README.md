@@ -7,14 +7,16 @@
 ```
 python.exe -m pip install --upgrade pip
 pip install -r requirements.txt
-
+python manage.py runserver
+```
+Опционально
+```
 python manage.py createsuperuser
 ```
 ```
 python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic
-python manage.py runserver
 ```
 
 # Здравствуйте, в этом проекте есть:
