@@ -5,8 +5,9 @@
 - Python 3.10.6
 - Установите все зависимости с помощью команды 
 ```
-pip install -r requirements.txt
 python.exe -m pip install --upgrade pip
+pip install -r requirements.txt
+
 python manage.py createsuperuser
 ```
 ```
